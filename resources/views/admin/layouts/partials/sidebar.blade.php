@@ -62,6 +62,27 @@
                         </a>
                     </li>
                 @endcan
+                <li class="nav-header">Day 4</li>
+                @can('product-view')
+                <li class="nav-item">
+                    <a href="{{ route('admin.products.index') }}" class="nav-link">
+                        <i class="nav-icon fas fa-database"></i>
+                        <p>
+                            product
+                        </p>
+                    </a>
+                </li>
+            @endcan
+            @can('purchase-view')
+                <li class="nav-item">
+                    <a href="{{ route('admin.purchase-orders.index') }}" class="nav-link">
+                        <i class="nav-icon fas fa-database"></i>
+                        <p>
+                            Purchase Order
+                        </p>
+                    </a>
+                </li>
+            @endcan
                 <li class="nav-item">
                     <a href="{{ route('logout') }}" title="Logout" class="nav-link" onclick="event.preventDefault();
             document.getElementById('formLogout').submit();">

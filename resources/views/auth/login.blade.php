@@ -64,6 +64,14 @@
         </p> --}}
       </div>
       <!-- /.login-card-body -->
+
     </div>
+</div>
+
+<div class="info-login mt-3">
+    <ul class="list-unstyled">
+        <li class="list-item">Username : superadmin</li>
+        <li class="list-item">password : superadmin</li>
+    </ul>
 </div>
 @endsection

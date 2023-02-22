@@ -60,5 +60,11 @@ Route::middleware(['auth'])->group(function () {
             Route::delete('/{id}/delete','PermissionController@destroy')->name('permissions.destroy')->middleware('can:permission-delete');
         });
 
+        // products
+        Route::resource('products',ProductController::class);
+
+         // purchase-orders
+         Route::resource('purchase-orders',PurchaseOrderController::class);
+
     });
 });
