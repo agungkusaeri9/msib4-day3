@@ -31,7 +31,7 @@
                         </a>
                     </li>
                 @endcan
-                <li class="nav-header">DATA MASTER</li>
+                <li class="nav-header">Day 3</li>
                 @can('user-view')
                     <li class="nav-item">
                         <a href="{{ route('admin.users.index') }}" class="nav-link">

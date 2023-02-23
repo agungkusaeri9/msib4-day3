@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -16,7 +17,10 @@ use Illuminate\Support\Facades\Route;
 
 Auth::routes(['register' => false]);
 
-Route::redirect('/', '/login', 301)->name('home');
+Route::get('/', 'HomeController@index')->name('home');
+Route::get('/tugas5', 'Tugas5Controller@index')->name('tugas5.index');
+Route::get('/tugas5/bootstrap', 'Tugas5Controller@bootstrap')->name('tugas5.bootstrap');
+Route::get('/tugas5/semantic', 'Tugas5Controller@semantic')->name('tugas5.semantic');
 
 Route::middleware(['auth'])->group(function () {
     Route::prefix('admin')->namespace('Admin')->name('admin.')->group(function () {
