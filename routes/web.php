@@ -18,9 +18,16 @@ use Illuminate\Support\Facades\Route;
 Auth::routes(['register' => false]);
 
 Route::get('/', 'HomeController@index')->name('home');
+
+// tugas 5
 Route::get('/tugas5', 'Tugas5Controller@index')->name('tugas5.index');
 Route::get('/tugas5/bootstrap', 'Tugas5Controller@bootstrap')->name('tugas5.bootstrap');
 Route::get('/tugas5/semantic', 'Tugas5Controller@semantic')->name('tugas5.semantic');
+
+// tugas 6
+Route::get('/tugas6', 'Tugas6Controller@index')->name('tugas6.index');
+Route::get('/tugas6/jqueryui', 'Tugas6Controller@jqueryui')->name('tugas6.jqueryui');
+Route::get('/tugas6/leafletjs', 'Tugas6Controller@leafletjs')->name('tugas6.leafletjs');
 
 Route::middleware(['auth'])->group(function () {
     Route::prefix('admin')->namespace('Admin')->name('admin.')->group(function () {
