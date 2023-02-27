@@ -23,3 +23,11 @@ untuk melihat tugas day 4 di halaman admin saya sudah membuat nama menu day 4, y
 untuk melakukan update jika sebelumnya sudah melakukan kloning, bisa mengikuti langkah berikut:
 1. ketikan "php artisan migrate" di terminal/cmd
 2. ketikan "php artisan db:seed --class=ProductTableSeeder" untuk membuat 5 data
+
+
+
+<!-- update tugas 7 -->
+1. git pull terlebih dahulu
+2. ketikan perintah composer install untuk menginstal package yajra datatable
+3. ketikan "php artisan db:seed --class=ProductTableSeeder" untuk membuat dummy data product
+4. running "php artisan serve"

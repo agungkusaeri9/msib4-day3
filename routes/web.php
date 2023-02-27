@@ -29,6 +29,10 @@ Route::get('/tugas6', 'Tugas6Controller@index')->name('tugas6.index');
 Route::get('/tugas6/jqueryui', 'Tugas6Controller@jqueryui')->name('tugas6.jqueryui');
 Route::get('/tugas6/leafletjs', 'Tugas6Controller@leafletjs')->name('tugas6.leafletjs');
 
+// tugas 7
+Route::get('/tugas7/getdata', 'Tugas7Controller@data')->name('tugas7.data');
+Route::get('/tugas7', 'Tugas7Controller@index')->name('tugas7.index');
+
 Route::middleware(['auth'])->group(function () {
     Route::prefix('admin')->namespace('Admin')->name('admin.')->group(function () {
         Route::get('/','DashboardController')->name('dashboard')->middleware('can:dashboard');

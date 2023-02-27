@@ -1,61 +1,6 @@
-@extends('admin.layouts.app')
+@extends('layouts.app')
 @section('content')
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-md-12">
-            <div class="card">
-                <div class="card-header">
-                    <div class="d-flex justify-content-between">
-                        <h6>Data Product</h6>
-                        @can('product-create')
-                        <a href="{{ route('admin.products.create') }}" class="btn btn-primary btn-sm">Create Product</a>
-                        @endcan
-                    </div>
-                </div>
-                <div class="card-body">
-                    <table id="table" class="table table-bordered table-hover">
-                        <thead>
-                            <tr>
-                                <th  style="width:20px">No</th>
-                                <th>Name</th>
-                                <th>Code</th>
-                                <th>Price</th>
-                                @canany(['product-edit', 'product-delete'])
-                                <th style="width:120px;text-align:center">Aksi</th>
-                                @endcanany
-                            </tr>
-                        </thead>
-                        <tbody>
-                            @foreach ($items as $item)
-                            <tr>
-                                <td class="text-center">{{ $loop->iteration }}</td>
-                                <td>{{ $item->name }}</td>
-                                <td>{{ $item->code }}</td>
-                                <td>Rp. {{ number_format($item->price) }}</td>
-
-                                @canany(['product-edit', 'product-delete'])
-                                <td>
-                                    @can('product-edit')
-                                    <a href="{{ route('admin.products.edit',$item->id) }}" class="btn btn-sm btn-info" title="Edit"><i class="fas fa-edit"></i></a>
-                                    @endcan
-                                    @can('product-delete')
-                                    <form method="post" class="d-inline" id="formDelete">
-                                        @csrf
-                                        @method('delete')
-                                        <button title="Hapus" class="btn btn-sm btn-danger btnDelete" data-action="{{ route('admin.products.destroy',$item->id) }}"><i class="fas fa-trash"></i></button>
-                                    </form>
-                                    @endcan
-                                </td>
-                                @endcanany
-                            </tr>
-                            @endforeach
-                        </tbody>
-                      </table>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+<h1>Hllo</h1>
 @endsection
 @push('styles')
 <!-- DataTables -->
