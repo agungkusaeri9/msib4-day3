@@ -17,6 +17,8 @@ use Illuminate\Support\Facades\Route;
 
 Auth::routes(['register' => false]);
 
+Route::redirect('/home', '/', 301);
+
 Route::get('/', 'HomeController@index')->name('home');
 
 // tugas 5
@@ -36,6 +38,12 @@ Route::get('/tugas7', 'Tugas7Controller@index')->name('tugas7.index');
 // tugas 8
 Route::get('/tugas8', 'Tugas8Controller@index')->name('tugas8.index');
 Route::get('/tugas8/chartjs', 'Tugas8Controller@chartjs')->name('tugas8.chartjs');
+
+// tugas 9
+Route::get('/tugas9', 'Tugas9Controller@index')->name('tugas9.index');
+Route::get('/tugas9/google-view','Tugas9Controller@google_view')->name('tugas9.google-view');
+Route::get('/tugas9/google/callback','Tugas9Controller@google_callback')->name('tugas9.google-callback');
+
 
 Route::middleware(['auth'])->group(function () {
     Route::prefix('admin')->namespace('Admin')->name('admin.')->group(function () {

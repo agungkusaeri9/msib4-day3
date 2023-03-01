@@ -75,3 +75,9 @@
     </ul>
 </div>
 @endsection
+@push('styles')
+<link rel="stylesheet" href="{{ asset('assets/plugins/sweetalert2/sweetalert2.min.css') }}">
+@endpush
+@push('scripts')
+@include('admin.layouts.partials.sweetalert')
+@endpush

@@ -31,3 +31,13 @@ untuk melakukan update jika sebelumnya sudah melakukan kloning, bisa mengikuti l
 2. ketikan perintah composer install untuk menginstal package yajra datatable
 3. ketikan "php artisan db:seed --class=ProductTableSeeder" untuk membuat dummy data product
 4. running "php artisan serve"
+
+
+
+-------update tugas 9---------
+1. ketika composer install
+2. ketikan php artisan migrate
+3. tambahkan konfigurasi di .env
+GOOGLE_CLIENT_ID=529011281702-kbhc832pdroppslctm6ee5l3j01d77oe.apps.googleusercontent.com
+GOOGLE_CLIENT_SECRET=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
+GOOGLE_CLIENT_REDIRECT=http://localhost:8000/tugas9/google/callback
