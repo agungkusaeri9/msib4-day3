@@ -41,3 +41,9 @@ untuk melakukan update jika sebelumnya sudah melakukan kloning, bisa mengikuti l
 GOOGLE_CLIENT_ID=529011281702-kbhc832pdroppslctm6ee5l3j01d77oe.apps.googleusercontent.com
 GOOGLE_CLIENT_SECRET=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
 GOOGLE_CLIENT_REDIRECT=http://localhost:8000/tugas9/google/callback
+
+
+
+------ update tugas 10 -------
+1. ketikan composer install untuk meninstall spreadsheet/laravel excel
+2. running php artisan serve

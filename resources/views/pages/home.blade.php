@@ -96,6 +96,17 @@
                  </div>
                 </a>
              </div>
+
+             <div class="col-md-4 mb-3 border-right">
+                <a href="{{ route('tugas10.index') }}" class="text-decoration-none text-dark">
+                 <div class="cards">
+                     <div class="first bg-white p-4 text-center">
+                         <img src="https://img.icons8.com/clouds/100/000000/box.png" />
+                         <h5>Tugas Day 10</h5>
+                     </div>
+                 </div>
+                </a>
+             </div>
         </div>
     </div>
 @endsection

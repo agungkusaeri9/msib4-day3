@@ -45,6 +45,10 @@ Route::get('/tugas9/google-view','Tugas9Controller@google_view')->name('tugas9.g
 Route::get('/tugas9/google/callback','Tugas9Controller@google_callback')->name('tugas9.google-callback');
 
 
+// tugas 10
+Route::get('/tugas10', 'Tugas10Controller@index')->name('tugas10.index');
+Route::get('/tugas10/export-excel', 'Tugas10Controller@excel')->name('tugas10.excel');
+
 Route::middleware(['auth'])->group(function () {
     Route::prefix('admin')->namespace('Admin')->name('admin.')->group(function () {
         Route::get('/','DashboardController')->name('dashboard')->middleware('can:dashboard');
