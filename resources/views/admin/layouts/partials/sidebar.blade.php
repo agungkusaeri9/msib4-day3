@@ -83,6 +83,15 @@
                     </a>
                 </li>
             @endcan
+            <li class="nav-header">Day 11</li>
+            <li class="nav-item">
+                <a href="{{ route('admin.tugas11.index') }}" class="nav-link">
+                    <i class="nav-icon fas fa-file"></i>
+                    <p>
+                        Reporting
+                    </p>
+                </a>
+            </li>
                 <li class="nav-item">
                     <a href="{{ route('logout') }}" title="Logout" class="nav-link" onclick="event.preventDefault();
             document.getElementById('formLogout').submit();">
